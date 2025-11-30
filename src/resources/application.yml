@@ -1,0 +1,11 @@
+server:
+  port: 8080
+
+payments:
+  settlement-window-seconds: 30
+  fraud-threshold-amount: 10000
+  default-currency: USD
+
+kafka:
+  bootstrap-servers: localhost:9092
+  payments-topic: payments-events
