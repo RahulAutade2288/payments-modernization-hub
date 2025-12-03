@@ -75,7 +75,7 @@ Architecture diagrams are located in the `diagrams` directory.
 
 ### Clone the Repository
 
-```bash
+
 git clone https://github.com/RahulAutade2288/payments-modernization-hub.git
 cd payments-modernization-hub
 
