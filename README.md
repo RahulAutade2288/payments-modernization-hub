@@ -35,7 +35,40 @@ Architecture diagrams are located in the `diagrams` directory.
 ---
 
 ## 3. Project Structure
+```text
+payments-modernization-hub
+│
+├── README.md
+├── src
+│   ├── main
+│   │   ├── java
+│   │   │   └── com.payments.modernization
+│   │   │       ├── account
+│   │   │       ├── api
+│   │   │       ├── auth
+│   │   │       ├── clearing
+│   │   │       ├── config
+│   │   │       ├── core
+│   │   │       ├── crypto
+│   │   │       ├── exceptions
+│   │   │       ├── iso20022
+│   │   │       ├── kafka
+│   │   │       ├── ledger
+│   │   │       ├── model
+│   │   │       ├── notifications
+│   │   │       ├── rtp
+│   │   │       ├── rules
+│   │   │       ├── security
+│   │   │       ├── settlement
+│   │   │       ├── simulation
+│   │   │       └── zelle
+│   └── resources
+│       └── application.yml
+│
+├── diagrams
+└── docs
 
+---
 
 
 ---
