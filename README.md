@@ -35,7 +35,7 @@ Architecture diagrams are located in the `diagrams` directory.
 ---
 
 
-## 4. Key Components
+## 3. Key Components
 
 ### Core Processing
 
@@ -60,7 +60,7 @@ Architecture diagrams are located in the `diagrams` directory.
 
 ---
 
-## 5. Getting Started
+## 4. Getting Started
 
 ### Requirements
 
@@ -75,7 +75,7 @@ cd payments-modernization-hub
 
 ---
 
-## 6. Use Cases
+## 5. Use Cases
 
 This repository can be used for a wide range of learning, demonstration, and engineering scenarios, including:
 
@@ -88,7 +88,7 @@ This repository can be used for a wide range of learning, demonstration, and eng
 
 ---
 
-## 7. Roadmap & Future Enhancements
+## 6. Roadmap & Future Enhancements
 
 Planned improvements and future extensions include:
 
@@ -101,7 +101,7 @@ Planned improvements and future extensions include:
 
 ---
 
-## 8. Author
+## 7. Author
 
 **Rahul Autade**  
 - Senior Technology Manager and architect specializing in payments modernization, real time payments, ISO 20022, and financial technology engineering.  
@@ -109,7 +109,7 @@ Planned improvements and future extensions include:
 
 ---
 
-## 3. Project Structure
+## 8. Project Structure
 
 ```text
 
