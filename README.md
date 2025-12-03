@@ -69,6 +69,7 @@ payments-modernization-hub
 ├── diagrams
 └── docs
 
+```text
 ---
 
 ## 1. Overview
