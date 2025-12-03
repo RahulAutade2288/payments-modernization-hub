@@ -69,3 +69,21 @@ payments-modernization-hub
 │
 ├── diagrams
 └── docs
+
+---
+
+## 1. Overview
+
+This repository demonstrates the building blocks of a next generation payment system.  
+It includes:
+
+- Real time payment flows similar to RTP and FedNow  
+- High value payment and wire processing  
+- ISO 20022 style parsing and message construction  
+- Multi-rail routing and orchestration  
+- Rules, validation, and sanctions-style checks  
+- Ledger posting and settlement models  
+- Kafka event integration points  
+- Utility modules for fees, limits, risk, and configuration  
+
+---
