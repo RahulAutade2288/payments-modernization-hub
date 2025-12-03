@@ -36,7 +36,7 @@ Architecture diagrams are located in the `diagrams` directory.
 ---
 
 ## 3. Project Structure
-
+```text
 payments-modernization-hub
 │
 ├── README.md
