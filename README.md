@@ -34,44 +34,6 @@ Architecture diagrams are located in the `diagrams` directory.
 
 ---
 
-## 3. Project Structure
-
-```text
-
-payments-modernization-hub
-│
-├── README.md
-├── src
-│ ├── main
-│ │ ├── java
-│ │ │ └── com.payments.modernization
-│ │ │ ├── account
-│ │ │ ├── api
-│ │ │ ├── auth
-│ │ │ ├── clearing
-│ │ │ ├── config
-│ │ │ ├── core
-│ │ │ ├── crypto
-│ │ │ ├── exceptions
-│ │ │ ├── iso20022
-│ │ │ ├── kafka
-│ │ │ ├── ledger
-│ │ │ ├── model
-│ │ │ ├── notifications
-│ │ │ ├── rtp
-│ │ │ ├── rules
-│ │ │ ├── security
-│ │ │ ├── settlement
-│ │ │ ├── simulation
-│ │ │ └── zelle
-│ └── resources
-│ └── application.yml
-│
-├── diagrams
-└── docs
-
-
----
 
 ## 4. Key Components
 
@@ -144,5 +106,44 @@ Planned improvements and future extensions include:
 **Rahul Autade**  
 - Senior Technology Manager and architect specializing in payments modernization, real time payments, ISO 20022, and financial technology engineering.  
 - Portfolio: **https://rahulautade2288.github.io/**
+
+---
+
+## 3. Project Structure
+
+```text
+
+payments-modernization-hub
+│
+├── README.md
+├── src
+│ ├── main
+│ │ ├── java
+│ │ │ └── com.payments.modernization
+│ │ │ ├── account
+│ │ │ ├── api
+│ │ │ ├── auth
+│ │ │ ├── clearing
+│ │ │ ├── config
+│ │ │ ├── core
+│ │ │ ├── crypto
+│ │ │ ├── exceptions
+│ │ │ ├── iso20022
+│ │ │ ├── kafka
+│ │ │ ├── ledger
+│ │ │ ├── model
+│ │ │ ├── notifications
+│ │ │ ├── rtp
+│ │ │ ├── rules
+│ │ │ ├── security
+│ │ │ ├── settlement
+│ │ │ ├── simulation
+│ │ │ └── zelle
+│ └── resources
+│ └── application.yml
+│
+├── diagrams
+└── docs
+
 
 ---
