@@ -109,7 +109,7 @@ Planned improvements and future extensions include:
 ## 8. Author
 
 **Rahul Autade**  
-Senior Technology Manager and architect specializing in payments modernization, real time payments, ISO 20022, and financial technology engineering.  
-Portfolio: **https://rahulautade2288.github.io/**
+- Senior Technology Manager and architect specializing in payments modernization, real time payments, ISO 20022, and financial technology engineering.  
+- Portfolio: **https://rahulautade2288.github.io/**
 
 ---
