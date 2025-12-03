@@ -34,22 +34,6 @@ Architecture diagrams are located in the `diagrams` directory.
 
 ---
 
-**This will fix all formatting issues below the code block.**
-
----
-
-# ✅ **Option 2: Correct indentation (not recommended for long code blocks)**
-
-```md
-3. Project Structure
-
-    ```text
-    payments-modernization-hub
-    │
-    ├── README.md
-    ...
-    ```
-
 ## 3. Project Structure
 
 payments-modernization-hub
