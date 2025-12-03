@@ -84,6 +84,8 @@ payments-modernization-hub
     ├── API_Specification.pdf
     └── Zelle_Modernization_Program.pdf
 
+---
+
 ## 4. Key Components
 Core Processing
 
@@ -120,7 +122,7 @@ Identifies suspicious transaction frequency.
 FeeRuleEngine, CutoffTimeEvaluator, CountryRiskScorer
 Examples of common rule engines in payment systems.
 
-
+---
 
 ## 5. Getting Started
 Requirements
@@ -130,6 +132,8 @@ Java 17 or later
 Maven or Gradle (optional)
 
 An IDE such as IntelliJ IDEA or VS Code
+
+---
 
 ## 6. Use Cases
 
@@ -147,6 +151,8 @@ Supporting research or EB1A portfolio documentation
 
 Showcasing hands-on experience with financial technology engineering
 
+---
+
 ## 7. Roadmap
 
 Future enhancements may include:
@@ -161,6 +167,7 @@ Creating full end-to-end payment simulations
 
 Adding unit tests and integration tests
 
+---
 
 ## 8. Author
 
