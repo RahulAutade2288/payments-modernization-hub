@@ -117,42 +117,5 @@ Full end-to-end payment simulations
 
 Unit and integration testing modules
 
----
-
-## 3. Project Structure
-```text
-payments-modernization-hub
-│
-├── README.md
-├── src
-│   ├── main
-│   │   ├── java
-│   │   │   └── com.payments.modernization
-│   │   │       ├── account
-│   │   │       ├── api
-│   │   │       ├── auth
-│   │   │       ├── clearing
-│   │   │       ├── config
-│   │   │       ├── core
-│   │   │       ├── crypto
-│   │   │       ├── exceptions
-│   │   │       ├── iso20022
-│   │   │       ├── kafka
-│   │   │       ├── ledger
-│   │   │       ├── model
-│   │   │       ├── notifications
-│   │   │       ├── rtp
-│   │   │       ├── rules
-│   │   │       ├── security
-│   │   │       ├── settlement
-│   │   │       ├── simulation
-│   │   │       └── zelle
-│   └── resources
-│       └── application.yml
-│
-├── diagrams
-└── docs
-
----
 
 
