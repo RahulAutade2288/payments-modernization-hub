@@ -1,154 +1,66 @@
 # Payments Modernization Hub
 
-A reference implementation of a modern payments hub designed for banks and fintech organizations.  
-This project models how large financial institutions can process real time and high-value payments using ISO 20022 standards, microservices-style components, and event-driven workflows.
+A Java reference catalogue of the building blocks inside a modern bank payment hub. It is organised the way a real hub is: channels and APIs, orchestration, rails, rules, risk, ledger and settlement. The repo also bundles the ISO 20022 schemas the hub works with.
 
----
+Each class is small and self-contained, so you can read how a single concern works (an idempotency check, a cut-off rule, a Zelle alias check) without wading through a framework.
 
-## 1. Overview
+## What's inside
 
-This repository demonstrates core building blocks of a next-generation payment system. It includes:
+| Area | Package | Examples |
+|------|---------|----------|
+| Core processing | `core` | Payment engine, orchestrator, router, idempotency, replay detection, channel normalization |
+| ISO 20022 | `iso20022` | pacs.008 parsing, pacs.002 status building, camt.054 parsing |
+| Real-time rails | `rtp`, `zelle` | RTP limits, fees, timeouts and messages; Zelle enrollment, alias validation, limits and risk |
+| Rules | `rules` | Rule engine, fee rules, cut-off times, country risk |
+| Risk and security | `security`, `validation` | Fraud detection, velocity checks, device fingerprint, geo-IP, sanctions, IBAN and schema validation |
+| Ledger and settlement | `ledger`, `settlement`, `clearing` | Posting, reconciliation, snapshots, netting, liquidity, clearing windows |
+| Integration | `api`, `kafka`, `notifications` | Payment, inquiry, admin and health endpoints; topic and partition helpers; email and SMS notices |
+| Platform | `auth`, `crypto`, `config`, `model`, `utils`, `simulation` | JWT and API keys, hashing and signatures, cutover flags and region config, load simulation |
 
-- Real time payment flows (RTP / FedNow style)  
-- High-value payment and wire processing  
-- ISO 20022 style parsing and message construction  
-- Multi-rail routing and orchestration  
-- Rules, validation, and sanctions-style checks  
-- Ledger posting and settlement models  
-- Kafka-like event integration points  
-- Utility modules for fees, limits, risk scoring, configuration, and more  
+## ISO 20022 schemas
 
----
+The `xsd/` folder holds 35 ISO 20022 message schemas used across payment initiation, exceptions and investigations, and account switching:
 
-## 2. Architecture Summary
+- `pain`: 001, 002, 007, 008
+- `camt`: 026 to 039, 055 to 059, 087
+- `acmt`: 027 to 037
 
-The design follows these principles:
-
-- **Modular, domain-driven structure** with clearly separated packages  
-- **Rail-specific services** for RTP and Zelle style flows  
-- **Event-friendly design** supporting stream processing and asynchronous flows  
-- **ISO 20022 compliant components** for structured, data-rich messaging  
-- **Extensible architecture** allowing for additional rails, clearing networks, or custom business logic  
-
-Architecture diagrams are located in the `diagrams` directory.
-
----
-
-
-## 3. Key Components
-
-### Core Processing
-
-**PaymentEngine**: Processes payment requests, applies business rules, and determines success or failure.  
-**PaymentOrchestrator**: Coordinates payment routing and execution logic across different payment rails.
-
-### ISO 20022 Helpers
-
-**Pacs008Parser**: Parses simplified ISO 20022 XML messages to extract fields like `EndToEndId`.  
-**Pacs002Builder**: Builds basic acknowledgment messages for payment status updates.
-
-### RTP and Zelle Services
-
-**RtpLimitService**, **RtpFeeCalculator**: Implements logic for payment limits and fee calculations.  
-**ZelleEnrollmentService**, **ZelleAliasValidator**, **ZelleLimitService**: Handles alias verification, account enrollment logic, and daily limit enforcement.
-
-### Risk, Security, and Rules
-
-**FraudDetectionEngine**: Basic rule-based fraud detection logic.  
-**VelocityCheckService**: Monitors transaction velocity and raises alerts when thresholds are exceeded.  
-**FeeRuleEngine**, **CutoffTimeEvaluator**, **CountryRiskScorer**: Example modules for fee policies, cut-off time checks, and country-based risk scoring.
-
----
-
-## 4. Getting Started
-
-### Requirements
-
-- Java 17 or later  
-- Maven or Gradle (optional)  
-- An IDE such as IntelliJ IDEA or VS Code
-
-### Clone the Repository
-
-git clone https://github.com/RahulAutade2288/payments-modernization-hub.git
-cd payments-modernization-hub
-
----
-
-## 5. Use Cases
-
-This repository can be used for a wide range of learning, demonstration, and engineering scenarios, including:
-
-- **Learning payment hub design fundamentals** such as orchestration, routing, and rule evaluation  
-- **Teaching banking and ISO 20022 messaging concepts** with hands-on Java examples  
-- **Demonstrating payment system architecture** during technical interviews or architecture reviews  
-- **Prototyping new payment rails or clearing systems** using modular and extensible components  
-- **Showcasing real-world financial technology engineering skills** for career, portfolio, or academic use  
-
----
-
-## 6. Roadmap & Future Enhancements
-
-Planned improvements and future extensions include:
-
-- **Spring Boot wrappers** to expose RESTful APIs for payment initiation and status retrieval  
-- **Real Kafka producers and consumers** to simulate event-driven clearing and settlement  
-- **Expanded ISO 20022 coverage** including additional message types such as pacs, pain, and camt series  
-- **Full end-to-end payment flow simulations** covering initiation, validation, routing, posting, settlement, and notifications  
-- **Comprehensive unit and integration tests** for reliability and regression coverage  
-- **Enhanced logging, monitoring, and error-handling frameworks** for production-grade observability  
-
----
-
-## 7. References
-
-Official standards and rail documentation are linked in [docs/References.md](docs/References.md) rather than copied into this repository.
-
----
-
-## 8. Author
-
-**Rahul Autade**  
-- Payments modernization and implementation leader specializing in real-time payments, ISO 20022 and bank integrations.  
-- Portfolio: **https://rahulautade2288.github.io/**
-
----
-
-## 9. Project Structure
+## Project layout
 
 ```text
+payments-modernization-hub/
+├── src/modernization/   Java source, one package per area
+├── src/resources/       application.yml (ports, settlement window, fraud threshold, Kafka topics)
+├── xsd/                 ISO 20022 schemas
+├── diagrams/            Solution and orchestration diagrams
+└── docs/                References to official standards
+```
 
-payments-modernization-hub
-│
-├── README.md
-├── src
-│ ├── main
-│ │ ├── java
-│ │ │ └── com.payments.modernization
-│ │ │ ├── account
-│ │ │ ├── api
-│ │ │ ├── auth
-│ │ │ ├── clearing
-│ │ │ ├── config
-│ │ │ ├── core
-│ │ │ ├── crypto
-│ │ │ ├── exceptions
-│ │ │ ├── iso20022
-│ │ │ ├── kafka
-│ │ │ ├── ledger
-│ │ │ ├── model
-│ │ │ ├── notifications
-│ │ │ ├── rtp
-│ │ │ ├── rules
-│ │ │ ├── security
-│ │ │ ├── settlement
-│ │ │ ├── simulation
-│ │ │ └── zelle
-│ └── resources
-│ └── application.yml
-│
-├── diagrams
-└── docs
+## Getting started
 
+```bash
+git clone https://github.com/RahulAutade2288/payments-modernization-hub.git
+```
 
----
+Open the project in IntelliJ IDEA or VS Code with Java 17 or later. The classes use only the Java standard library, so there is nothing to install.
+
+## Roadmap
+
+- Spring Boot wrappers to expose the payment and inquiry APIs over REST
+- Real Kafka producers and consumers for clearing and settlement events
+- XSD-based validation of inbound pacs, pain and camt messages
+- End-to-end flow simulations from initiation to notification
+- Unit and integration tests
+
+## References
+
+Official standards and rail documentation are linked in [docs/References.md](docs/References.md).
+
+## Disclaimer
+
+This is a learning and reference project, not production payment software.
+
+## Author
+
+**Rahul Autade**, Payments Modernization & Implementation Leader
+[rahulautade2288.github.io](https://rahulautade2288.github.io/) · [LinkedIn](https://www.linkedin.com/in/rahul-autade/)
