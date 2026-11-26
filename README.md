@@ -39,24 +39,24 @@ Architecture diagrams are located in the `diagrams` directory.
 
 ### Core Processing
 
-**PaymentEngine** — Processes payment requests, applies business rules, and determines success or failure.  
-**PaymentOrchestrator** — Coordinates payment routing and execution logic across different payment rails.
+**PaymentEngine**: Processes payment requests, applies business rules, and determines success or failure.  
+**PaymentOrchestrator**: Coordinates payment routing and execution logic across different payment rails.
 
 ### ISO 20022 Helpers
 
-**Pacs008Parser** — Parses simplified ISO 20022 XML messages to extract fields like `EndToEndId`.  
-**Pacs002Builder** — Builds basic acknowledgment messages for payment status updates.
+**Pacs008Parser**: Parses simplified ISO 20022 XML messages to extract fields like `EndToEndId`.  
+**Pacs002Builder**: Builds basic acknowledgment messages for payment status updates.
 
 ### RTP and Zelle Services
 
-**RtpLimitService**, **RtpFeeCalculator** — Implements logic for payment limits and fee calculations.  
-**ZelleEnrollmentService**, **ZelleAliasValidator**, **ZelleLimitService** — Handles alias verification, account enrollment logic, and daily limit enforcement.
+**RtpLimitService**, **RtpFeeCalculator**: Implements logic for payment limits and fee calculations.  
+**ZelleEnrollmentService**, **ZelleAliasValidator**, **ZelleLimitService**: Handles alias verification, account enrollment logic, and daily limit enforcement.
 
 ### Risk, Security, and Rules
 
-**FraudDetectionEngine** — Basic rule-based fraud detection logic.  
-**VelocityCheckService** — Monitors transaction velocity and raises alerts when thresholds are exceeded.  
-**FeeRuleEngine**, **CutoffTimeEvaluator**, **CountryRiskScorer** — Example modules for fee policies, cut-off time checks, and country-based risk scoring.
+**FraudDetectionEngine**: Basic rule-based fraud detection logic.  
+**VelocityCheckService**: Monitors transaction velocity and raises alerts when thresholds are exceeded.  
+**FeeRuleEngine**, **CutoffTimeEvaluator**, **CountryRiskScorer**: Example modules for fee policies, cut-off time checks, and country-based risk scoring.
 
 ---
 
