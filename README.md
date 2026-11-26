@@ -83,7 +83,6 @@ This repository can be used for a wide range of learning, demonstration, and eng
 - **Teaching banking and ISO 20022 messaging concepts** with hands-on Java examples  
 - **Demonstrating payment system architecture** during technical interviews or architecture reviews  
 - **Prototyping new payment rails or clearing systems** using modular and extensible components  
-- **Supporting research or EB-1A documentation** by showcasing technical design and implementation work  
 - **Showcasing real-world financial technology engineering skills** for career, portfolio, or academic use  
 
 ---
@@ -101,15 +100,21 @@ Planned improvements and future extensions include:
 
 ---
 
-## 7. Author
+## 7. References
+
+Official standards and rail documentation are linked in [docs/References.md](docs/References.md) rather than copied into this repository.
+
+---
+
+## 8. Author
 
 **Rahul Autade**  
-- Senior Technology Manager and architect specializing in payments modernization, real time payments, ISO 20022, and financial technology engineering.  
+- Payments modernization and implementation leader specializing in real-time payments, ISO 20022 and bank integrations.  
 - Portfolio: **https://rahulautade2288.github.io/**
 
 ---
 
-## 8. Project Structure
+## 9. Project Structure
 
 ```text
 
